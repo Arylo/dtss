@@ -1,0 +1,47 @@
+{
+  "name": "dtss",
+  "version": "1.0.0",
+  "description": "The project is generated in [`arylo-init`](https://www.npmjs.com/package/arylo-init)",
+  "main": "dist/index.js",
+  "types": "lib/index.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "tsc": "tsc --locale zh-cn --pretty",
+    "build": "npm run tsc -- -P tsconfig.json",
+    "pretest": "npm run clean && npm run tsc -- -P tsconfig.test.json",
+    "test": "ava dist/test",
+    "lint": "npm run lint:typescript && npm run lint:javascript",
+    "lint:typescript": "tslint lib/**/*.ts test/**/*.ts",
+    "lint:javascript": "eslint lib/**/*.js test/**/*.js"
+  },
+  "keywords": [
+    "arylo"
+  ],
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "author": "AryloYeung <arylo.open@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arylo/dtss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arylo/dtss/issues"
+  },
+  "homepage": "https://github.com/Arylo/dtss#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.1.2",
+    "ava": "^0.25.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  }
+}
