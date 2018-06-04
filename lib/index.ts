@@ -1,12 +1,12 @@
 export enum LEVEL {
-    ss, s, m, h, d, M, y
+    ms, s, m, h, d, M, y
 }
 
 // tslint:disable-next-line:class-name
 export class dtss {
 
     public static LEVEL = LEVEL;
-    private level = LEVEL.ss;
+    private level = LEVEL.ms;
 
     constructor(level?: LEVEL) {
         if (level) {
@@ -23,8 +23,8 @@ export class dtss {
         return this.level;
     }
 
-    public ss(time: number) {
-        return time === 0 ? 0 : this.cal(time, LEVEL.ss);
+    public ms(time: number) {
+        return time === 0 ? 0 : this.cal(time, LEVEL.ms);
     }
 
     public s(time: number) {
@@ -90,7 +90,7 @@ export class dtss {
                     break;
                 }
                 time *= 1000;
-            case LEVEL.ss:
+            case LEVEL.ms:
                 time *= 1;
                 break;
         }
@@ -99,8 +99,8 @@ export class dtss {
 
 }
 
-export const ss = (time: number) => {
-    return new dtss().ss(time);
+export const ms = (time: number) => {
+    return new dtss().ms(time);
 };
 export const s = (time: number) => {
     return new dtss().s(time);

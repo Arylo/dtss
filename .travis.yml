@@ -6,8 +6,10 @@ node_js:
   - "8"
   - "6"
 
-script:
+before_script:
   - "npm install nyc --global"
+
+script:
   - "nyc npm test"
 
 before_deploy:

@@ -1,7 +1,7 @@
 {
   "name": "dtss",
-  "version": "1.0.0",
-  "description": "The project is generated in [`arylo-init`](https://www.npmjs.com/package/arylo-init)",
+  "version": "1.0.1",
+  "description": "Set the delay time quickly.",
   "main": "dist/index.js",
   "types": "lib/index.ts",
   "scripts": {
@@ -15,8 +15,12 @@
     "lint:javascript": "eslint lib/**/*.js test/**/*.js"
   },
   "keywords": [
-    "arylo"
+    "arylo",
+    "date"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "files": [
     "dist",
     "lib"
@@ -32,7 +36,7 @@
   "homepage": "https://github.com/Arylo/dtss#readme",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^10.1.2",
+    "@types/node": "^10.3.0",
     "ava": "^0.25.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",

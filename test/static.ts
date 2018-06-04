@@ -1,11 +1,11 @@
 import time, { test } from "ava";
-import { d, h, m, M, s, ss, y } from "../lib";
+import { d, h, m, M, ms, s, y } from "../lib";
 
-test("Test ss", (t) => {
-    t.is(ss(1000), 1000);
-    t.is(ss(1), 1);
-    t.is(ss(0), 0);
-    t.is(ss(-1), -1);
+test("Test ms", (t) => {
+    t.is(ms(1000), 1000);
+    t.is(ms(1), 1);
+    t.is(ms(0), 0);
+    t.is(ms(-1), -1);
 });
 
 test("Test second", (t) => {

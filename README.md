@@ -1,6 +1,6 @@
 # dtss
 
-The project is generated in [`arylo-init`](https://www.npmjs.com/package/arylo-init)
+Set the delay time quickly.
 
 [![node][NPM_URL]][NPM_HREF]
 [![Travis][TRAVIS_URL]][TRAVIS_HREF]
@@ -9,6 +9,26 @@ The project is generated in [`arylo-init`](https://www.npmjs.com/package/arylo-i
 [![David][DAVID_URL]][DAVID_HREF]
 [![Author][AUTHOR_URL]][AUTHOR_HREF]
 [![license][LICENSE_URL]][LICENSE_HREF]
+
+## Usage
+
+typescript:
+```typescript
+import dtss = require('dtss');
+
+dtss.s(58); // 58 * 1000 ms => 58s
+dtss.m(14); // 14 * 60 * 1000 ms => 14min
+dtss.h(7); // 7 * 60 * 60 * 1000 ms => 7hour
+```
+
+javascript:
+```javascript
+const dtss = require('dtss');
+
+dtss.s(58); // 58 * 1000 ms => 58s
+dtss.m(14); // 14 * 60 * 1000 ms => 14min
+dtss.h(7); // 7 * 60 * 60 * 1000 ms => 7hour
+```
 
 [NPM_URL]: https://img.shields.io/node/v/dtss.svg?style=flat-square&maxAge=600
 [NPM_HREF]: https://www.npmjs.com/package/dtss

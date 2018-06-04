@@ -1,11 +1,11 @@
 import time, { test } from "ava";
 import { dtss, LEVEL } from "../lib";
 
-test("Test ss", (t) => {
-    t.is(new dtss().ss(1000), 1000);
-    t.is(new dtss().ss(1), 1);
-    t.is(new dtss().ss(0), 0);
-    t.is(new dtss().ss(-1), -1);
+test("Test ms", (t) => {
+    t.is(new dtss().ms(1000), 1000);
+    t.is(new dtss().ms(1), 1);
+    t.is(new dtss().ms(0), 0);
+    t.is(new dtss().ms(-1), -1);
 });
 
 test("Test second", (t) => {
@@ -51,8 +51,8 @@ test("Test year", (t) => {
 });
 
 test("Get Level", (t) => {
-    t.is(new dtss().getLevel(), LEVEL.ss);
-    t.is(new dtss().setLevel(LEVEL.ss).getLevel(), LEVEL.ss);
+    t.is(new dtss().getLevel(), LEVEL.ms);
+    t.is(new dtss().setLevel(LEVEL.ms).getLevel(), LEVEL.ms);
     t.is(new dtss().setLevel(LEVEL.s).getLevel(), LEVEL.s);
     t.is(new dtss().setLevel(LEVEL.m).getLevel(), LEVEL.m);
     t.is(new dtss().setLevel(LEVEL.h).getLevel(), LEVEL.h);
