@@ -1,6 +1,6 @@
 {
   "name": "dtss",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Set the delay time quickly.",
   "main": "dist/index.js",
   "types": "lib/index.ts",
@@ -9,7 +9,7 @@
     "tsc": "tsc --locale zh-cn --pretty",
     "build": "npm run tsc -- -P tsconfig.json",
     "pretest": "npm run clean && npm run tsc -- -P tsconfig.test.json",
-    "test": "ava dist/test",
+    "test": "ava dist/test/**/*.spec.*",
     "lint": "npm run lint:typescript && npm run lint:javascript",
     "lint:typescript": "tslint lib/**/*.ts test/**/*.ts",
     "lint:javascript": "eslint lib/**/*.js test/**/*.js"

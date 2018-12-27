@@ -1,4 +1,4 @@
-import time, { test } from "ava";
+import test from "ava";
 import { dtss, LEVEL } from "../lib";
 
 test("Test ms", (t) => {
@@ -59,4 +59,15 @@ test("Get Level", (t) => {
     t.is(new dtss().setLevel(LEVEL.d).getLevel(), LEVEL.d);
     t.is(new dtss().setLevel(LEVEL.M).getLevel(), LEVEL.M);
     t.is(new dtss().setLevel(LEVEL.y).getLevel(), LEVEL.y);
+});
+
+test("Get Level Str", (t) => {
+    t.is(new dtss().getLevelString(), "ms");
+    t.is(new dtss().setLevel(LEVEL.ms).getLevelString(), "ms");
+    t.is(new dtss().setLevel(LEVEL.s).getLevelString(), "s");
+    t.is(new dtss().setLevel(LEVEL.m).getLevelString(), "m");
+    t.is(new dtss().setLevel(LEVEL.h).getLevelString(), "h");
+    t.is(new dtss().setLevel(LEVEL.d).getLevelString(), "d");
+    t.is(new dtss().setLevel(LEVEL.M).getLevelString(), "M");
+    t.is(new dtss().setLevel(LEVEL.y).getLevelString(), "y");
 });

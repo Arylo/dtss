@@ -1,4 +1,4 @@
-import time, { test } from "ava";
+import test from "ava";
 import { d, h, m, M, ms, s, y } from "../lib";
 
 test("Test ms", (t) => {
