@@ -3,6 +3,7 @@ language: node_js
 node_js:
   - "node"
   - "lts/*"
+  - "10"
   - "8"
   - "6"
 
@@ -23,7 +24,7 @@ after_success:
 deploy:
   skip_cleanup: true
   provider: npm
-  email: "arylo.open@gmail.com"
+  email: "arylo.open+npm@gmail.com"
   api_key: "${NPM_TOKEN}"
   on:
     branch: master
