@@ -2,16 +2,16 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "importHelpers": true,
     "pretty": true,
     "sourceMap": true,
     "newLine": "LF",
-    "outDir": "dist"
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "declarationMap": true
   },
-  "include": [
-    "lib/**/*"
-  ]
+  "include": ["lib/**/*", "test/**/*"]
 }
